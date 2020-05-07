@@ -13,4 +13,8 @@ export class Tab3Page {
     console.log('ionViewWillEnter: Tab3');
   }
 
+  ionViewWillLeave() {
+    console.log('ionViewWillLeave: Tab3');
+  }
+
 }

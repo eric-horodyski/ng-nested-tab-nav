@@ -13,4 +13,8 @@ export class LandingPage {
     console.log('ionViewWillEnter: LandingPage');
   }
 
+  ionViewWillLeave() {
+    console.log('ionViewWillLeave: LandingPage');
+  }
+
 }
