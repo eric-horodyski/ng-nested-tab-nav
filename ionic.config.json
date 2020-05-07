@@ -1,0 +1,7 @@
+{
+  "name": "ng-nested-tab-nav",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
