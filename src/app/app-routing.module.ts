@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { StatusbarGuard } from './statusbar.guard';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./landing/landing.module').then(m => m.LandingPageModule)
+    loadChildren: () => import('./landing/landing.module').then(m => m.LandingPageModule),
+    canActivate: [StatusbarGuard]
   },
   {
     path: 'home',
