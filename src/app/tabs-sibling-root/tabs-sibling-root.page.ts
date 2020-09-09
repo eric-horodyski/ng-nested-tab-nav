@@ -1,22 +1,28 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-tabs-sibling-root',
-  templateUrl: 'tabs-sibling-root.page.html',
-  styleUrls: ['./tabs-sibling-root.page.scss']
+  selector: "app-tabs-sibling-root",
+  templateUrl: "tabs-sibling-root.page.html",
+  styleUrls: ["./tabs-sibling-root.page.scss"],
 })
 export class TabsSiblingRootPage {
-
-  constructor() { }
+  constructor() {}
 
   ionViewWillEnter() {
-    console.log('ionViewWillEnter: TabsSiblingRootPage');
+    console.log("ionViewWillEnter: Tab Sibling Root Page");
   }
 
   ionViewWillLeave() {
-    console.log('ionViewWillLeave: TabsSiblingRootPage');
+    console.log("ionViewWillLeave: Tab Sibling Root Page");
   }
 
-  navigateToTabs
+  ionViewDidLeave() {
+    console.log("ionViewDidLeave: Tab Sibling Root Page");
+  }
 
+  ionViewDidEnter() {
+    console.log("ionViewDidEnter: Tab Sibling Root Page");
+  }
+
+  navigateToTabs;
 }

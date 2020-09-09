@@ -1,22 +1,23 @@
-import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { StatusbarGuard } from './statusbar.guard';
+import { NgModule } from "@angular/core";
+import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+import { StatusbarGuard } from "./statusbar.guard";
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./landing/landing.module').then(m => m.LandingPageModule),
-    canActivate: [StatusbarGuard]
+    path: "",
+    loadChildren: () =>
+      import("./landing/landing.module").then((m) => m.LandingPageModule),
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule),
+    path: "home",
+    loadChildren: () =>
+      import("./home/home.module").then((m) => m.HomePageModule),
   },
 ];
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,20 +1,26 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.page.html',
-  styleUrls: ['./landing.page.scss'],
+  selector: "app-landing",
+  templateUrl: "./landing.page.html",
+  styleUrls: ["./landing.page.scss"],
 })
 export class LandingPage {
-
-  constructor() { }
+  constructor() {}
 
   ionViewWillEnter() {
-    console.log('ionViewWillEnter: LandingPage');
+    console.log("ionViewWillEnter: Landing Page");
   }
 
   ionViewWillLeave() {
-    console.log('ionViewWillLeave: LandingPage');
+    console.log("ionViewWillLeave: Landing Page");
   }
 
+  ionViewDidLeave() {
+    console.log("ionViewDidLeave: Landing Page");
+  }
+
+  ionViewDidEnter() {
+    console.log("ionViewDidEnter: Landing Page");
+  }
 }
